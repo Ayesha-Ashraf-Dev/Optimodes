@@ -1,0 +1,148 @@
+.faqPage {
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.heroSection {
+  background: linear-gradient(135deg, #1351d8 0%, #0d3aa7 100%);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  color: white;
+}
+
+.faqSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: #1351d8;
+  box-shadow: 0 5px 20px rgba(19, 81, 216, 0.1);
+}
+
+.faqQuestion {
+  display: block;
+  width: 100%;
+  padding: 25px;
+  background: white;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1351d8;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faqQuestion:hover {
+  background: #f5f5f5;
+}
+
+.faqItem[open] .faqQuestion {
+  background: #f0f5ff;
+}
+
+.faqAnswer {
+  padding: 20px 25px;
+  border-top: 2px solid #e0e0e0;
+  background: white;
+}
+
+.faqAnswer p {
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.contactSection {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #1351d8 0%, #0d3aa7 100%);
+  color: white;
+}
+
+.contactSection h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.contactSection p {
+  font-size: 18px;
+  margin: 0 0 35px 0;
+  opacity: 0.95;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 15px 45px;
+  background: white;
+  color: #1351d8;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 18px;
+  }
+
+  .faqQuestion {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .faqAnswer {
+    padding: 15px 20px;
+  }
+
+  .contactSection h2 {
+    font-size: 28px;
+  }
+}

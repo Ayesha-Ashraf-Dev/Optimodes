@@ -1,0 +1,397 @@
+/* =========================================
+   Header Component Styles
+   ========================================= */
+
+.header {
+  background-color: var(--color-white);
+}
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  height: 80px; /* Fixed height for better positioning */
+  display: flex;
+  align-items: center;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Navbar Header (Logo + Toggle) */
+.navbarHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbarBrand {
+  display: inline-block;
+  line-height: 0;
+}
+
+.brandName {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Navbar Toggle Button (Mobile) */
+.navbarToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-heading);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.3s ease;
+  z-index: 1002;
+}
+
+.navbarToggle:hover {
+  color: var(--color-primary);
+}
+
+/* Navbar Collapse */
+.navbarCollapse {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Navigation List */
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  color: var(--color-heading);
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownItem {
+  position: relative;
+}
+
+.navLink {
+  display: block;
+  padding: 15px 20px;
+  color: var(--color-heading);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+/* Right Side Attributes */
+.attrRight {
+  display: flex;
+  align-items: center;
+}
+
+.attrNav {
+  display: flex;
+  align-items: center;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-gray);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.info p {
+  font-size: 12px;
+  color: var(--color-paragraph);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.info h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+
+.info a {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: var(--color-primary);
+}
+
+/* Mobile Menu Overlay */
+.overlayScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 991px) {
+  .contactInfo {
+    padding: 0 10px;
+  }
+  
+  .info h5 {
+    font-size: 12px;
+  }
+  
+  .info p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 10px 0;
+  }
+
+  .navbarToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbarCollapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex: none;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    border-top: none;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .collapseOpen {
+    transform: translateX(0);
+  }
+
+  /* Mobile menu close button */
+  .collapseHeader {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .collapseHeader button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-heading);
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    max-width: 300px;
+  }
+
+  .dropdownItem {
+    width: 100%;
+  }
+
+  .dropdownToggle,
+  .navLink {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navLink:last-child {
+    border-bottom: none;
+  }
+
+  .navLink:hover {
+    background-color: #f8f9fa;
+  }
+
+  .attrRight {
+    display: none;
+  }
+
+  /* Mobile contact info in menu */
+  .mobileContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .mobileContact .contactInfo {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+    padding: 8px 0;
+  }
+
+  .navContainer {
+    padding: 0 10px;
+  }
+
+  .navbarHeader {
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbarBrand img {
+    height: 35px !important;
+    width: auto !important;
+  }
+
+  .brandName {
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .navList {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .navLink {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+
+  .contactInfo {
+    padding: 0 5px;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .info p {
+    font-size: 10px;
+  }
+
+  .info h5 {
+    font-size: 11px;
+  }
+
+  .collapseOpen {
+    padding: 15px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .navbarBrand img {
+    height: 30px !important;
+  }
+
+  .navLink {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .navbarToggle {
+    font-size: 20px;
+    padding: 5px;
+  }
+}

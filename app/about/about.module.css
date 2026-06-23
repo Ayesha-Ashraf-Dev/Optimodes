@@ -1,0 +1,182 @@
+.aboutPage {
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.heroSection {
+  background: linear-gradient(135deg, #1351d8 0%, #0d3aa7 100%);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  animation: slideUpFade 0.8s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  animation: slideUpFade 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overviewSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contentBlock h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1351d8;
+  margin: 0 0 20px 0;
+}
+
+.contentBlock p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+
+.valuesSection {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: #1351d8;
+  margin: 0 0 60px 0;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.valueCard {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  box-shadow: 0 10px 35px rgba(19, 81, 216, 0.15);
+  transform: translateY(-5px);
+}
+
+.valueCard h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1351d8;
+  margin: 0 0 15px 0;
+}
+
+.valueCard p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+.ctaSection {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #1351d8 0%, #0d3aa7 100%);
+  color: white;
+}
+
+.ctaSection h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.ctaSection p {
+  font-size: 18px;
+  margin: 0 0 35px 0;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 45px;
+  background: white;
+  color: #1351d8;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 18px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contentBlock h2 {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .ctaSection h2 {
+    font-size: 28px;
+  }
+}

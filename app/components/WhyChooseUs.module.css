@@ -1,0 +1,564 @@
+.chooseUsArea {
+  position: relative;
+  padding: 50px 0;
+  background: white;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.chooseUsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mainTitle {
+  font-size: 45px;
+  font-weight: 600;
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin: 0;
+  animation: slideInLeft 0.8s ease-out 0.1s both;
+}
+
+.descriptionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* List Styling */
+.listStyleOne {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listStyleOne li {
+  font-size: 16px;
+  color: var(--color-dark);
+  font-weight: 500;
+  padding-left: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.listStyleOne li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 18px;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.listStyleOne li:hover {
+  color: var(--color-primary);
+  padding-left: 35px;
+}
+
+/* Expertise Box */
+.expertiseBox {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+  overflow: hidden;
+  animation: slideInLeft 0.8s ease-out 0.3s both;
+}
+
+.expertiseBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(19, 81, 216, 0.7), rgba(156, 0, 255, 0.7));
+  z-index: 1;
+}
+
+.expertiseContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.expertiseLeft {
+  flex: 1;
+}
+
+.experienceText {
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.experienceText strong {
+  font-size: 52px;
+  display: block;
+  margin-bottom: 5px;
+  animation: popIn 0.8s ease-out 0.4s both;
+}
+
+.expertiseRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Video Button */
+.videoButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: var(--color-primary);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(19, 81, 216, 0.2);
+  animation: slideInRight 0.8s ease-out 0.4s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoButton:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.videoButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(19, 81, 216, 0.3);
+  color: white;
+}
+
+.videoButton:hover:before {
+  left: 0;
+}
+
+.videoButton span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.videoButton i {
+  font-size: 16px;
+}
+
+/* Right Column */
+.rightColumn {
+  position: relative;
+}
+
+.illustrationWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  object-fit: contain;
+  animation: slideInRight 0.8s ease-out 0.1s both;
+  position: relative;
+  z-index: 3;
+}
+
+/* Decorative Shape */
+.decorativeShape {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.6;
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.decorativeShape img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Counter Box */
+.counterBox {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 20px 50px rgba(19, 81, 216, 0.25);
+  animation: popIn 0.8s ease-out 0.3s both;
+  z-index: 2;
+  min-width: 160px;
+  text-align: center;
+}
+
+.counterValue {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.counter {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.operator {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  margin-top: 5px;
+}
+
+.counterLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: capitalize;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .contentGrid {
+    gap: 60px;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .illustrationWrapper {
+    height: 400px;
+  }
+
+  .illustration {
+    max-width: 380px;
+  }
+
+  .expertiseBox {
+    padding: 40px;
+  }
+
+  .expertiseContent {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .expertiseRight {
+    justify-content: flex-start;
+  }
+
+  .videoButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .counterBox {
+    padding: 25px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .counter {
+    font-size: 42px;
+  }
+
+  .operator {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chooseUsArea {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .listStyleOne li {
+    font-size: 15px;
+  }
+
+  .illustrationWrapper {
+    height: 350px;
+  }
+
+  .illustration {
+    max-width: 300px;
+  }
+
+  .decorativeShape {
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .expertiseBox {
+    padding: 30px;
+    min-height: 160px;
+  }
+
+  .experienceText {
+    font-size: 28px;
+  }
+
+  .experienceText strong {
+    font-size: 40px;
+  }
+
+  .counterBox {
+    padding: 20px;
+    right: 15px;
+    bottom: 15px;
+    min-width: 140px;
+  }
+
+  .counter {
+    font-size: 36px;
+  }
+
+  .operator {
+    font-size: 20px;
+  }
+
+  .counterLabel {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .chooseUsArea {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .contentGrid {
+    gap: 40px;
+  }
+
+  .leftColumn {
+    gap: 30px;
+  }
+
+  .chooseUsContent {
+    gap: 20px;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .listStyleOne {
+    gap: 12px;
+  }
+
+  .listStyleOne li {
+    font-size: 14px;
+    padding-left: 22px;
+  }
+
+  .listStyleOne li:hover {
+    padding-left: 28px;
+  }
+
+  .descriptionBlock {
+    gap: 18px;
+  }
+
+  .expertiseBox {
+    padding: 25px;
+    min-height: 140px;
+    border-radius: 8px;
+  }
+
+  .experienceText {
+    font-size: 22px;
+  }
+
+  .experienceText strong {
+    font-size: 32px;
+  }
+
+  .videoButton {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+
+  .illustrationWrapper {
+    height: 280px;
+  }
+
+  .illustration {
+    max-width: 250px;
+  }
+
+  .decorativeShape {
+    top: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    opacity: 0.4;
+  }
+
+  .counterBox {
+    padding: 18px;
+    right: 12px;
+    bottom: 12px;
+    min-width: 130px;
+  }
+
+  .counter {
+    font-size: 32px;
+  }
+
+  .operator {
+    font-size: 18px;
+  }
+
+  .counterLabel {
+    font-size: 11px;
+  }
+}

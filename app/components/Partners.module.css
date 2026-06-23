@@ -1,0 +1,285 @@
+.partnersArea {
+  position: relative;
+  padding: 50px 0;
+  background: white;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Column - Partner Map */
+.leftColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnerMap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.partnerCount {
+  font-size: 120px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
+  z-index: 2;
+  position: relative;
+}
+
+.partnerText {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Right Column - Partner Logos */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInRight 0.8s ease-out 0.3s both;
+}
+
+.partnerItems {
+  padding: 20px;
+}
+
+.logoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(245, 246, 250, 1) 0%, rgba(240, 242, 247, 1) 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.logoItem:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.logoItem:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.logoItem:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.logoItem:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.logoItem:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.logoItem:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+.logoItem:hover {
+  background: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(19, 81, 216, 0.15);
+  transform: translateY(-5px);
+}
+
+.logoItem img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logoItem:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .contentGrid {
+    gap: 50px;
+  }
+
+  .partnerMap {
+    max-width: 300px;
+  }
+
+  .partnerCount {
+    font-size: 50px;
+  }
+
+  .partnerText {
+    font-size: 20px;
+  }
+
+  .logoList {
+    gap: 30px;
+  }
+
+  .logoItem {
+    padding: 15px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .partnersArea {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .partnerMap {
+    max-width: 280px;
+    aspect-ratio: auto;
+    height: 280px;
+  }
+
+  .partnerCount {
+    font-size: 80px;
+  }
+
+  .partnerText {
+    font-size: 18px;
+  }
+
+  .logoList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .logoItem {
+    padding: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .partnersArea {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .contentGrid {
+    gap: 40px;
+  }
+
+  .partnerMap {
+    max-width: 240px;
+    height: 240px;
+  }
+
+  .partnerCount {
+    font-size: 60px;
+  }
+
+  .partnerText {
+    font-size: 16px;
+  }
+
+  .logoList {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .logoItem {
+    padding: 12px;
+  }
+
+  .logoItem img {
+    max-width: 80px;
+  }
+}

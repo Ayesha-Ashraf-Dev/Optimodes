@@ -1,0 +1,456 @@
+.footer {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 41, 82, 0.95) 0%, rgba(20, 28, 60, 0.95) 100%),
+    url(/assets/img/shape/banner-8.jpg);
+  background-size: auto, cover;
+  background-position: center, center;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, scroll;
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.footerContent {
+  padding: 80px 0 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.footerColumn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.footerColumn:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.footerColumn:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.footerColumn:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+/* About Section */
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoWrapper {
+  width: 100%;
+  max-width: 180px;
+}
+
+.footerLogo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.aboutText {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Social Links */
+.socialLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(19, 81, 216, 0.4);
+}
+
+/* Link Section */
+.linkSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columnTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.columnTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.footerLink:hover {
+  color: var(--color-primary);
+  padding-left: 8px;
+}
+
+/* Contact Section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  color: var(--color-primary);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  justify-items: start;
+}
+
+.copyrightText {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.brandLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brandLink:hover {
+  color: var(--color-secondary);
+}
+
+/* Policy Links */
+.policySection {
+  justify-self: end;
+}
+
+.policyLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.policyLink {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.policyLink:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .columnTitle {
+    font-size: 17px;
+  }
+
+  .footerLink {
+    font-size: 14px;
+  }
+
+  .contactText {
+    font-size: 13px;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .policySection {
+    justify-self: start;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footerContent {
+    padding: 60px 0 30px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+
+  .linkList {
+    gap: 10px;
+  }
+
+  .contactList {
+    gap: 15px;
+  }
+
+  .socialLinks {
+    gap: 12px;
+  }
+
+  .socialLink {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .footerBottom {
+    padding: 25px 0;
+    margin-top: 30px;
+  }
+
+  .bottomGrid {
+    gap: 20px;
+  }
+
+  .copyrightText {
+    font-size: 14px;
+  }
+
+  .policyLinks {
+    gap: 15px;
+  }
+
+  .policyLink {
+    font-size: 13px;
+  }
+
+  .aboutText {
+    font-size: 14px;
+  }
+
+  .footerLink {
+    font-size: 13px;
+  }
+
+  .contactText {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .footerContent {
+    padding: 40px 0 20px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .footerGrid {
+    gap: 30px;
+  }
+
+  .columnTitle {
+    font-size: 15px;
+  }
+
+  .columnTitle::after {
+    width: 30px;
+    height: 2px;
+  }
+
+  .linkList {
+    gap: 8px;
+  }
+
+  .contactList {
+    gap: 12px;
+  }
+
+  .contactItem {
+    gap: 10px;
+  }
+
+  .contactIcon {
+    font-size: 16px;
+  }
+
+  .socialLinks {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  .bottomGrid {
+    gap: 15px;
+  }
+
+  .copyrightText {
+    font-size: 12px;
+  }
+
+  .policyLinks {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .policyLink {
+    font-size: 12px;
+  }
+
+  .aboutText {
+    font-size: 13px;
+  }
+
+  .footerLink {
+    font-size: 12px;
+  }
+
+  .contactText {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .logoWrapper {
+    max-width: 150px;
+  }
+}
